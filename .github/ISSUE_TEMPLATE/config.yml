@@ -9,6 +9,10 @@ contact_links:
     url: "https://github.com/mariasilvaz/sistel-lab-learning-hub/tree/main/docs/estandares"
     about: "Consulta los estándares de código, documentación y diseño pedagógico antes de proponer cambios o nuevos módulos."
 
+  - name: "💬 Preguntas generales"
+    url: https://github.com/OWNER/REPO/discussions
+    about: Para preguntas abiertas que no son un error, una mejora ni una tarea concreta, usa Discussions en lugar de un Issue.
+
   - name: "📖 Guía de contribución"
     url: "https://github.com/mariasilvaz/sistel-lab-learning-hub/blob/main/CONTRIBUTING.md"
     about: "Revisa el flujo de trabajo con ramas, Issues, Pull Requests y criterios para considerar un módulo terminado."
