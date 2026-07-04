@@ -1,0 +1,20 @@
+Este repositorio usa un esquema de **doble licencia**, según el tipo de contenido:
+
+- **Código fuente** (funciones `.m`, *scripts*, herramientas de software, en general todo archivo dentro de `funciones/` o cualquier archivo con extensión de código): licenciado bajo **MIT**, cuyo texto completo está más abajo en este mismo archivo.
+- **Materiales académicos** (guías de práctica, documentación de módulos, estándares, README y demás archivos `.md`, presentaciones, figuras): licenciados bajo **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Ver [`LICENSE-DOCS.md`](./LICENSE-DOCS.md) para el texto y las condiciones de atribución.
+
+Ante cualquier duda sobre qué licencia aplica a un archivo específico, revisa el `README.md` del módulo correspondiente, que debe indicarlo explícitamente.
+
+---
+
+## Licencia MIT (código fuente)
+
+Copyright (c) Departamento de Telecomunicaciones, Facultad de Ingeniería Electrónica y Telecomunicaciones, Universidad del Cauca.
+
+Por medio de la presente se concede permiso, libre de cargos, a toda persona que obtenga una copia de este software y de los archivos de documentación asociados (el "Software"), para utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software, y a permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "COMO ESTÁ", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DERIVADAS DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O SU USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
+
+*(Texto oficial de referencia: https://opensource.org/license/mit/)*
