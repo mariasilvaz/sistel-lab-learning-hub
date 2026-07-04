@@ -43,8 +43,10 @@ herramienta-telecom/
 └── modulos/
     └── [nombre_modulo]/       ← un módulo autónomo por carpeta
         ├── README.md
-        ├── funciones/
+        ├── funciones/          (piezas reutilizables: modular, canal, BER, etc.)
         ├── practicas/
+        │   ├── 01_nombre_tema/  (script(s) de sistema + guía de ese tema)
+        │   └── 02_nombre_tema/
         ├── datos/
         ├── docs/               (01_descripcion_general.md … 09_decisiones_tecnicas.md)
         └── validacion/
