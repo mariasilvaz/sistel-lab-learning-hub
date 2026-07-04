@@ -1,0 +1,42 @@
+# MATLAB autosaves and backup files
+*.asv
+*.m~
+*.autosave
+
+# MATLAB temporary files
+*.tmp
+*.log
+
+# MATLAB/Simulink generated folders and cache
+slprj/
+simulink_cache/
+*.slxc
+*.slprj
+
+# Compiled MEX files
+*.mex*
+
+# MATLAB project/user-specific settings
+*.prj~
+*.user
+*.prefs
+
+# Generated reports and exports that should not be versioned by default
+*.html
+*.pdf
+*.docx
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Large local data folders, if used temporarily
+# Descomenta estas líneas solo si NO quieres versionar datos locales pesados.
+# data/
+# datos_locales/
+# outputs/
+# resultados_temporales/
