@@ -1,1 +1,157 @@
+name: Validación básica del repositorio
 
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validacion-basica:
+    name: Revisar estructura mínima del proyecto
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos globales obligatorios
+        shell: bash
+        run: |
+          set -e
+
+          required_files=(
+            "README.md"
+            "CONTRIBUTING.md"
+            "GOVERNANCE.md"
+            "CODE_OF_CONDUCT.md"
+            "AGENTS.md"
+            "CHANGELOG.md"
+            "LICENSE"
+            "LICENSE-DOCS.md"
+            "CODEOWNERS"
+            ".gitignore"
+          )
+
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Falta el archivo obligatorio: $file"
+              exit 1
+            fi
+          done
+
+          echo "Archivos globales obligatorios encontrados."
+
+      - name: Verificar plantillas de GitHub
+        shell: bash
+        run: |
+          set -e
+
+          required_github_files=(
+            ".github/PULL_REQUEST_TEMPLATE.md"
+            ".github/ISSUE_TEMPLATE/bug_report.md"
+            ".github/ISSUE_TEMPLATE/mejora_practica.md"
+            ".github/ISSUE_TEMPLATE/nuevo_modulo.md"
+            ".github/ISSUE_TEMPLATE/tarea_desarrollo.md"
+            ".github/ISSUE_TEMPLATE/config.yml"
+          )
+
+          for file in "${required_github_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Falta una plantilla de GitHub: $file"
+              exit 1
+            fi
+          done
+
+          echo "Plantillas de Issues y Pull Request encontradas."
+
+      - name: Verificar estándares y plantillas del proyecto
+        shell: bash
+        run: |
+          set -e
+
+          required_docs=(
+            "docs/estandares/estandar_codigo.md"
+            "docs/estandares/estandar_documentacion.md"
+            "docs/estandares/estandar_pedagogico.md"
+            "docs/plantillas/plantilla_funcion.m"
+            "docs/plantillas/plantilla_script_sistema.m"
+            "docs/plantillas/plantilla_guia.md"
+            "docs/plantillas/plantilla_readme_modulo.md"
+          )
+
+          for file in "${required_docs[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Falta un estándar o plantilla del proyecto: $file"
+              exit 1
+            fi
+          done
+
+          echo "Estándares y plantillas base encontrados."
+
+      - name: Verificar archivos temporales no permitidos
+        shell: bash
+        run: |
+          set -e
+
+          forbidden_files=$(find . \
+            -path "./.git" -prune -o \
+            -type f \( \
+              -name "*.asv" -o \
+              -name "*.m~" -o \
+              -name "*.autosave" -o \
+              -name ".DS_Store" -o \
+              -name "Thumbs.db" \
+            \) -print)
+
+          if [ -n "$forbidden_files" ]; then
+            echo "Se encontraron archivos temporales que no deberían subirse:"
+            echo "$forbidden_files"
+            exit 1
+          fi
+
+          echo "No se encontraron archivos temporales prohibidos."
+
+      - name: Verificar estructura de módulos, si existe
+        shell: bash
+        run: |
+          set -e
+
+          if [ ! -d "modulos" ]; then
+            echo "Advertencia: todavía no existe la carpeta modulos/. Esto es aceptable si el proyecto aún está en configuración inicial."
+            exit 0
+          fi
+
+          module_count=$(find modulos -mindepth 1 -maxdepth 1 -type d | wc -l)
+
+          if [ "$module_count" -eq 0 ]; then
+            echo "La carpeta modulos/ existe, pero todavía no contiene módulos."
+            exit 0
+          fi
+
+          for module_dir in modulos/*/; do
+            module_name=$(basename "$module_dir")
+
+            if [ ! -f "${module_dir}README.md" ]; then
+              echo "El módulo $module_name no tiene README.md."
+              exit 1
+            fi
+
+            expected_dirs=(
+              "funciones"
+              "practicas"
+              "datos"
+              "docs"
+              "validacion"
+            )
+
+            for dir in "${expected_dirs[@]}"; do
+              if [ ! -d "${module_dir}${dir}" ]; then
+                echo "El módulo $module_name no tiene la carpeta requerida: $dir/"
+                exit 1
+              fi
+            done
+          done
+
+          echo "Estructura básica de módulos verificada."
