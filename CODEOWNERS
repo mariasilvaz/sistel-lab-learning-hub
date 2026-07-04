@@ -1,0 +1,36 @@
+# CODEOWNERS
+#
+# Este archivo activa la revisión obligatoria por dueño de carpeta en los
+# pull requests (ver "Reglas de protección de la rama main" en GOVERNANCE.md).
+# Reemplaza los usuarios/equipos de ejemplo (@equipo-..., @usuario-...) por
+# los reales de tu organización de GitHub antes de activarlo.
+#
+# Sintaxis: cada línea es "ruta  @dueño1 @dueño2 ..."
+# La regla más específica (la última que coincide) es la que aplica.
+
+# Dueño por defecto: si nada más coincide, revisa el comité técnico.
+*                               @equipo-comite-tecnico
+
+# Documentos de gobernanza y estándares: cambios los revisa el comité técnico
+# y, cuando corresponde, el coordinador académico (ver GOVERNANCE.md).
+/GOVERNANCE.md                  @equipo-comite-tecnico @usuario-coordinador-academico
+/CONTRIBUTING.md                @equipo-comite-tecnico
+/README.md                      @equipo-comite-tecnico
+/AGENTS.md                      @equipo-comite-tecnico
+/docs/estandares/                @equipo-comite-tecnico
+/docs/plantillas/                @equipo-comite-tecnico
+/LICENSE                        @equipo-comite-tecnico @usuario-coordinador-academico
+/LICENSE-DOCS.md                @equipo-comite-tecnico @usuario-coordinador-academico
+
+# Configuración técnica del repositorio (CI, plantillas de Issues/PR):
+# solo el comité técnico.
+/.github/                       @equipo-comite-tecnico
+
+# Módulos: cada uno lo revisa su propio equipo y su docente asesor.
+# Agrega una línea nueva cada vez que se abra un módulo (ver GOVERNANCE.md,
+# "Flujo de vida de un módulo").
+/modulos/comunicaciones_digitales/   @equipo-comunicaciones-digitales @usuario-asesor-comunicaciones-digitales
+
+# Ejemplo para módulos futuros (descomenta y ajusta al crearlos):
+# /modulos/senales_sistemas/          @equipo-senales-sistemas @usuario-asesor-senales-sistemas
+# /modulos/comunicaciones_analogicas/ @equipo-comunicaciones-analogicas @usuario-asesor-comunicaciones-analogicas
