@@ -31,6 +31,7 @@ herramienta-telecom/
 ├── AGENTS.md                  ← instrucciones para asistentes de IA
 ├── LICENSE
 ├── CHANGELOG.md               ← historial de módulos integrados
+├── CODEOWNERS                 ← dueños de revisión por carpeta/módulo
 │
 ├── .github/
 │   ├── ISSUE_TEMPLATE/        ← plantillas de issues
