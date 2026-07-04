@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Estándares del proyecto
+    url: https://github.com/OWNER/REPO/tree/main/docs/estandares
+    about: Antes de abrir un Issue, revisa si tu duda ya está resuelta en los estándares del proyecto.
+  - name: 💬 Preguntas generales
+    url: https://github.com/OWNER/REPO/discussions
+    about: Para preguntas abiertas que no son un error, una mejora ni una tarea concreta, usa Discussions en lugar de un Issue.
