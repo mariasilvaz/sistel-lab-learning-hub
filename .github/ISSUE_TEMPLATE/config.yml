@@ -1,8 +1,18 @@
+# Configuración de plantillas de Issues
+# Ubicación en el repositorio:
+# .github/ISSUE_TEMPLATE/config.yml
+
 blank_issues_enabled: false
+
 contact_links:
-  - name: 📖 Estándares del proyecto
-    url: https://github.com/OWNER/REPO/tree/main/docs/estandares
-    about: Antes de abrir un Issue, revisa si tu duda ya está resuelta en los estándares del proyecto.
-  - name: 💬 Preguntas generales
-    url: https://github.com/OWNER/REPO/discussions
-    about: Para preguntas abiertas que no son un error, una mejora ni una tarea concreta, usa Discussions en lugar de un Issue.
+  - name: "📚 Estándares del proyecto"
+    url: "https://github.com/mariasilvaz/sistel-lab-learning-hub/tree/main/docs/estandares"
+    about: "Consulta los estándares de código, documentación y diseño pedagógico antes de proponer cambios o nuevos módulos."
+
+  - name: "📖 Guía de contribución"
+    url: "https://github.com/mariasilvaz/sistel-lab-learning-hub/blob/main/CONTRIBUTING.md"
+    about: "Revisa el flujo de trabajo con ramas, Issues, Pull Requests y criterios para considerar un módulo terminado."
+
+  - name: "🏛️ Gobernanza del proyecto"
+    url: "https://github.com/mariasilvaz/sistel-lab-learning-hub/blob/main/GOVERNANCE.md"
+    about: "Consulta los roles, permisos, reglas de protección de main y proceso de aprobación del repositorio."
