@@ -1,36 +1,33 @@
 # CODEOWNERS
+# Archivo temporal de propietarios de código.
+# Mientras el repositorio esté en la cuenta personal y no en una organización,
+# todas las revisiones quedan asignadas a @mariasilvaz.
 #
-# Este archivo activa la revisión obligatoria por dueño de carpeta en los
-# pull requests (ver "Reglas de protección de la rama main" en GOVERNANCE.md).
-# Reemplaza los usuarios/equipos de ejemplo (@equipo-..., @usuario-...) por
-# los reales de tu organización de GitHub antes de activarlo.
-#
-# Sintaxis: cada línea es "ruta  @dueño1 @dueño2 ..."
-# La regla más específica (la última que coincide) es la que aplica.
+# Más adelante, cuando existan equipos reales del departamento en una organización
+# de GitHub, estos propietarios pueden reemplazarse por equipos como:
+# @nombre-org/comite-tecnico
+# @nombre-org/equipo-comunicaciones-digitales
 
-# Dueño por defecto: si nada más coincide, revisa el comité técnico.
-*                               @equipo-comite-tecnico
+# Regla general: cualquier cambio en el repositorio requiere revisión de la propietaria temporal.
+* @mariasilvaz
 
-# Documentos de gobernanza y estándares: cambios los revisa el comité técnico
-# y, cuando corresponde, el coordinador académico (ver GOVERNANCE.md).
-/GOVERNANCE.md                  @equipo-comite-tecnico @usuario-coordinador-academico
-/CONTRIBUTING.md                @equipo-comite-tecnico
-/README.md                      @equipo-comite-tecnico
-/AGENTS.md                      @equipo-comite-tecnico
-/docs/estandares/                @equipo-comite-tecnico
-/docs/plantillas/                @equipo-comite-tecnico
-/LICENSE                        @equipo-comite-tecnico @usuario-coordinador-academico
-/LICENSE-DOCS.md                @equipo-comite-tecnico @usuario-coordinador-academico
+# Documentos globales del proyecto
+/README.md @mariasilvaz
+/CONTRIBUTING.md @mariasilvaz
+/GOVERNANCE.md @mariasilvaz
+/CODE_OF_CONDUCT.md @mariasilvaz
+/AGENTS.md @mariasilvaz
+/CHANGELOG.md @mariasilvaz
+/LICENSE @mariasilvaz
+/LICENSE-DOCS.md @mariasilvaz
+/CODEOWNERS @mariasilvaz
 
-# Configuración técnica del repositorio (CI, plantillas de Issues/PR):
-# solo el comité técnico.
-/.github/                       @equipo-comite-tecnico
+# Configuración de GitHub
+/.github/ @mariasilvaz
 
-# Módulos: cada uno lo revisa su propio equipo y su docente asesor.
-# Agrega una línea nueva cada vez que se abra un módulo (ver GOVERNANCE.md,
-# "Flujo de vida de un módulo").
-/modulos/comunicaciones_digitales/   @equipo-comunicaciones-digitales @usuario-asesor-comunicaciones-digitales
+# Documentación transversal
+/docs/estandares/ @mariasilvaz
+/docs/plantillas/ @mariasilvaz
 
-# Ejemplo para módulos futuros (descomenta y ajusta al crearlos):
-# /modulos/senales_sistemas/          @equipo-senales-sistemas @usuario-asesor-senales-sistemas
-# /modulos/comunicaciones_analogicas/ @equipo-comunicaciones-analogicas @usuario-asesor-comunicaciones-analogicas
+# Módulos del proyecto
+/modulos/ @mariasilvaz
