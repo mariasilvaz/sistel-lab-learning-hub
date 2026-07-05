@@ -31,7 +31,6 @@ herramienta-telecom/
 ├── AGENTS.md                  ← instrucciones para asistentes de IA
 ├── LICENSE
 ├── CHANGELOG.md               ← historial de módulos integrados
-├── CODEOWNERS                 ← dueños de revisión por carpeta/módulo
 │
 ├── .github/
 │   ├── ISSUE_TEMPLATE/        ← plantillas de issues
@@ -39,15 +38,14 @@ herramienta-telecom/
 │
 ├── docs/
 │   ├── estandares/            ← estándares obligatorios de código, docs y pedagogía
-│   └── plantillas/            ← plantillas base para nuevos módulos
+│   ├── plantillas/            ← plantillas base para nuevos módulos
+│   └── guias/                 ← guías metodológicas de trabajo con GitHub
 │
 └── modulos/
     └── [nombre_modulo]/       ← un módulo autónomo por carpeta
         ├── README.md
-        ├── funciones/          (piezas reutilizables: modular, canal, BER, etc.)
+        ├── funciones/
         ├── practicas/
-        │   ├── 01_nombre_tema/  (script(s) de sistema + guía de ese tema)
-        │   └── 02_nombre_tema/
         ├── datos/
         ├── docs/               (01_descripcion_general.md … 09_decisiones_tecnicas.md)
         └── validacion/
@@ -102,6 +100,7 @@ Para proponer un módulo nuevo, reportar un error o sugerir una mejora, abre un 
 | `docs/estandares/estandar_documentacion.md` | Qué documentación debe entregar cada módulo |
 | `docs/estandares/estandar_pedagogico.md` | Requisitos pedagógicos de cada práctica |
 | `docs/plantillas/` | Plantillas base para función, práctica y guía |
+| `docs/guias/guia_issues_projects.md` | Guía para organizar el trabajo con Issues, etiquetas, GitHub Projects, vistas y automatizaciones |
 | `GOVERNANCE.md` | Roles, comité técnico, flujo de *pull request* |
 | `AGENTS.md` | Instrucciones para asistentes de IA usados como apoyo de desarrollo |
 

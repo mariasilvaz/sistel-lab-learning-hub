@@ -26,6 +26,7 @@ El comité técnico actualiza este archivo como parte de la integración de cada
 ## Sin publicar
 
 ### Agregado
+- Guía de trabajo con Issues y GitHub Projects en `docs/guias/guia_issues_projects.md`.
 - Estructura base del repositorio: `README.md`, `CONTRIBUTING.md`, `GOVERNANCE.md`, `AGENTS.md`, `CODE_OF_CONDUCT.md`, `LICENSE` (MIT) y `LICENSE-DOCS.md` (CC BY 4.0).
 - Estándares del proyecto en `docs/estandares/`: código, documentación y pedagógico.
 - Plantillas de *Issues* y *pull request* en `.github/`.
