@@ -48,6 +48,8 @@ No se integra código directamente a `main` sin pasar por este proceso, sin exce
 
 ## Issues y GitHub Projects
 
+Para una explicación más detallada sobre cómo crear Issues, usar etiquetas y organizar el tablero de GitHub Projects, consulta `docs/guias/guia_issues_projects.md`.
+
 Todo trabajo (módulo nuevo, error, mejora de práctica, tarea de desarrollo) debe estar respaldado por un *Issue*:
 
 - Usa la plantilla correspondiente en `.github/ISSUE_TEMPLATE/`.
