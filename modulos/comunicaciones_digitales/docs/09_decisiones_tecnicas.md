@@ -9,7 +9,7 @@
 - Un único módulo grande desarrollado por un solo equipo. Se descartó porque no era viable como una sola pasantía o colaboración, y no permite que distintos equipos trabajen en paralelo sobre temas independientes.
 - Un tema por cada subtema exacto del temario. Se descartó por fragmentación excesiva, porque varios subtemas comparten fundamento teórico y tiene sentido pedagógico presentarlos juntos.
 
-**Consecuencia:** cada tema puede desarrollarse, revisarse e integrarse de forma independiente, con su propio *Issue*, equipo y *pull request*. El desarrollo puede avanzar en cualquier orden; no hay una dependencia estricta de ejecución entre temas, salvo la relación explícita entre `03_cuantificacion` y `17_codificacion_fuente_shannon`.
+**Consecuencia:** cada tema puede desarrollarse, revisarse e integrarse de forma independiente, con su propio *Issue*, equipo y *pull request*. El desarrollo puede avanzar en cualquier orden; no hay una dependencia estricta de ejecución entre temas, salvo relaciones transversales explícitas como `03_cuantificacion` → `17_codificacion_fuente_shannon` y `06_pulsos_nyquist_isi` → `07_modulacion_pam` / `08_modulacion_mqam_mpsk`.
 
 ## Fuente de datos intercambiable en vez de datos fijos por práctica
 
@@ -26,6 +26,16 @@
 **Motivación:** son la pieza que conecta la conversión análoga-digital con la codificación de fuente y los teoremas de Shannon.
 
 Mantenerlas como funciones compartidas permite que `funciones/fuente/audio_a_bits.m`, `imagen_a_bits.m` y el futuro tema `17_codificacion_fuente_shannon` reutilicen exactamente la misma cuantización que se estudia y valida en el tema 03, en lugar de tener implementaciones divergentes.
+
+## Pulsos conformadores como funciones transversales
+
+**Decisión:** crear `funciones/pulsos/` como subcarpeta transversal para los pulsos conformadores usados en transmisión digital.
+
+**Motivación:** el tema `06_pulsos_nyquist_isi` introduce pulsos como rectangular, sinc y coseno alzado, pero esos mismos pulsos se reutilizan después en `07_modulacion_pam` y `08_modulacion_mqam_mpsk`. Si cada práctica implementara sus propios pulsos, sería difícil comparar resultados entre temas porque podrían existir diferencias de normalización, duración, energía o muestreo.
+
+**Alternativa considerada:** dejar las funciones de pulso dentro de `practicas/06_pulsos_nyquist_isi/`. Se descartó porque convertiría al tema 06 en dueño local de funciones que en realidad pertenecen a la cadena completa de transmisión digital.
+
+**Consecuencia:** toda práctica que necesite un pulso conformador debe buscarlo primero en `funciones/pulsos/`. Si no existe, debe crearlo allí y documentarlo en el `README.md` de esa subcarpeta.
 
 ## Pendiente de decidir
 
